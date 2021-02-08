@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "A small inn with a prime location and some bad code.",
   "scripts": {
-    "test": "echo 'Hellllooo? Anyone there?'",
+    "test": "jest",
+    "test:coverage": "jest --collectCoverage",
     "lint": "eslint ./ --ignore-path .gitignore"
   },
   "repository": {
