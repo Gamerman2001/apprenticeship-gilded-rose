@@ -36,7 +36,7 @@ describe('updateQuality', () => {
   it('If item is Backstage Passes and sell_in is less than 6, add 3 to quality', () => {
     const standardItem = new Item('Backstage passes to a TAFKAL80ETC concert', 5, 30);
     updateQuality([standardItem]);
-    console.log('updated Passes 1');
+    // console.log('updated Passes 1');
     expect(standardItem.name).toBe('Backstage passes to a TAFKAL80ETC concert');
     expect(standardItem.sell_in).toBe(4);
     expect(standardItem.quality).toBe(33);
@@ -69,7 +69,7 @@ describe('updateQuality', () => {
     updateQuality([standardItem]);
     expect(standardItem.name).toBe('Backstage passes to a TAFKAL80ETC concert');
     expect(standardItem.sell_in).toBe(-1);
-    console.log('updated Passes 2');
+    // console.log('updated Passes 2');
     expect(standardItem.sell_in).toBe(-1);
   });
 
