@@ -2,7 +2,7 @@ steps:
   - name: Test & publish code coverage
     uses: paambaati/codeclimate-action@v2.7.5
     env:
-      CC_TEST_REPORTER_ID: <code_climate_reporter_id>
+      CC_TEST_REPORTER_ID: ${{secrets.CodeClimate}}
     with:
-      coverageCommand: npm run coverage
-      debug: false
+      coverageCommand: npm test
+      debug: true
