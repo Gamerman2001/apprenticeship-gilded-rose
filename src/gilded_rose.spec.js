@@ -12,7 +12,7 @@ describe('updateQuality', () => {
     expect(standardItem.quality).toEqual(80);
   });
 
-  it('Sulfuras will always default to 80 quality', ()=> {
+  it('Sulfuras will always default to 80 quality', () => {
     const standardItem = new Item('Sulfuras, Hand of Ragnaros', 0, 0);
     updateQuality([standardItem]);
     expect(standardItem.quality).toBe(80);
