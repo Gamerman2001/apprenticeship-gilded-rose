@@ -55,7 +55,7 @@ describe('updateQuality', () => {
     updateQuality([standardItem]);
     expect(standardItem.name).toBe('Backstage passes to a TAFKAL80ETC concert');
     expect(standardItem.sell_in).toBe(9);
-    expect(standardItem.quality).toBe(50);
+    expect(standardItem.quality).toBe(51);
   });
 
   it('If sell in date is 0 reduce sell date by 1', () => {
