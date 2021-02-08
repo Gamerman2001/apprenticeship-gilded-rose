@@ -11,11 +11,11 @@ jobs:
     strategy:
       matrix:
         node-version: [15.x]
-steps:
-  - name: Test & publish code coverage
-    uses: paambaati/codeclimate-action@v2.7.5
-    env:
-      CC_TEST_REPORTER_ID: ${{secrets.CodeClimate}}
-    with:
-      coverageCommand: npm test
-      debug: true
+    steps:
+      - name: Test & publish code coverage
+        uses: paambaati/codeclimate-action@v2.7.5
+        env:
+          CC_TEST_REPORTER_ID: ${{secrets.CodeClimate}}
+        with:
+          coverageCommand: npm test
+          debug: true
