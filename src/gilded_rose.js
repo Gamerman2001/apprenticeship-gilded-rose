@@ -23,32 +23,20 @@ updateQuality(items);
 */
 
 export function updateQuality(items) {
-   console.log(items, "items outer block");
 
    for (var i = 0; i < items.length; i++) {
 
       if (items[i].name === "Sulfuras, Hand of Ragnaros") {
          // console.log('hello in ', items[i].name)
          items[i].quality = 80;
-         console.log(items[i], "item log in code");
          // return {items[i].name, items[i].sell_in: Infinity, items[i].quality: 80}
       }
-      if (
-         items[i].name != "Aged Brie" &&
-         items[i].name != "Backstage passes to a TAFKAL80ETC concert"
-      ) {
-         if (items[i].quality > 0) {
-            if (items[i].name == "Sulfuras, Hand of Ragnaros") {
-               console.log(items[i]);
-               //  items[i].quality++
-               items[i].quality = 80;
-               // console.log(items[i].quality)
-            }
-         }
-      } else {
+      
+      // } else {
          if (items[i].quality < 50) {
             items[i].quality = items[i].quality + 1;
             if (items[i].name == "Backstage passes to a TAFKAL80ETC concert") {
+              // console.log(items[i], 'item block to check')
                if (items[i].sell_in < 11) {
                   if (items[i].quality < 50) {
                      items[i].quality = items[i].quality + 1;
@@ -61,11 +49,12 @@ export function updateQuality(items) {
                }
             }
          }
-      }
+      // }
 
       if (items[i].name != "Sulfuras, Hand of Ragnaros") {
          items[i].sell_in = items[i].sell_in - 1;
       }
+
       if (items[i].sell_in < 0) {
          if (items[i].name != "Aged Brie") {
             if (items[i].name != "Backstage passes to a TAFKAL80ETC concert") {
