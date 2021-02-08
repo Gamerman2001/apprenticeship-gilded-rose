@@ -1,4 +1,4 @@
-import { Item, updateQuality } from "./gilded_rose";
+import { Item, updateQuality } from './gilded_rose';
 
 describe('updateQuality', () => {
   it('Sulfuras quality must always be 80', () => {
@@ -6,7 +6,7 @@ describe('updateQuality', () => {
     expect(standardItem.quality).toEqual(80);
   });
 
-  it('Sulfuras quality must always be positive', () => { 
+  it('Sulfuras quality must always be positive', () => {
     const standardItem = new Item('Sulfuras, Hand of Ragnaros', 10, 0);
     updateQuality([standardItem]);
     expect(standardItem.quality).toEqual(80);

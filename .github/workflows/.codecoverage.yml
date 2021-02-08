@@ -1,3 +1,16 @@
+name: test-coverage
+on:
+  push:
+    branches: [ main, code-climate-test-coverage ]
+
+jobs:
+  test:
+    name: Code-Climate-Test
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [15.x]
 steps:
   - name: Test & publish code coverage
     uses: paambaati/codeclimate-action@v2.7.5
