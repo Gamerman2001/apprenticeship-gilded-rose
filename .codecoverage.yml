@@ -5,4 +5,4 @@ steps:
       CC_TEST_REPORTER_ID: <code_climate_reporter_id>
     with:
       coverageCommand: npm run coverage
-      debug: true
+      debug: false
